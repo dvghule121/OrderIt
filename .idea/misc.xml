@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/drawable-xhdpi/colorgradient.xml" value="0.2037037037037037" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/drawable/dialog_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/action_bar.xml" value="0.25" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/activity_main.xml" value="0.151268115942029" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/admin_order_card.xml" value="0.597678916827853" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/basket_card.xml" value="0.264" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/best_seller_card.xml" value="0.4" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/change_address.xml" value="0.4" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_admin_order.xml" value="0.1609375" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_admin_order_page.xml" value="0.13632246376811594" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_basket_page.xml" value="0.13632246376811594" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_basket_price_page.xml" value="0.264" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_best_sellers.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_buy_page.xml" value="0.264" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_home_page.xml" value="0.264" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_login_page.xml" value="0.129981884057971" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_navbar.xml" value="0.2" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_offer_page.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_order_detail.xml" value="0.264" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_order_page.xml" value="0.264" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_product_page.xml" value="0.264" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_register_page.xml" value="0.1" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_specials_page.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_swipe_filter.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/fragment_user_page.xml" value="0.264" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/offer_card.xml" value="0.14492753623188406" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/order_card.xml" value="0.536" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/layout/price_details.xml" value="0.5327433628318584" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Dyno/AndroidStudioProjects/OrderIt/app/src/main/res/mipmap-anydpi-v26/ic_orderit.xml" value="0.2703125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2772946859903382" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

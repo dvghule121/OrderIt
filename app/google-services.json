@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "801279068758",
+    "firebase_url": "https://orderit-6718e-default-rtdb.firebaseio.com",
+    "project_id": "orderit-6718e",
+    "storage_bucket": "orderit-6718e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801279068758:android:ca54852214945f1f4d49f7",
+        "android_client_info": {
+          "package_name": "com.example.orderit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801279068758-jdmulrhtqt9ah6u3du7fc2oou55678k0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD83LcNDMqJbND1E2E7qG2ga-1XHd9Z-C8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801279068758-jdmulrhtqt9ah6u3du7fc2oou55678k0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801279068758:android:487724f03aab93f24d49f7",
+        "android_client_info": {
+          "package_name": "com.example.shopker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801279068758-jdmulrhtqt9ah6u3du7fc2oou55678k0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD83LcNDMqJbND1E2E7qG2ga-1XHd9Z-C8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801279068758-jdmulrhtqt9ah6u3du7fc2oou55678k0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
