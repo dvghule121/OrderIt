@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.orderit.R
 import com.example.orderit.adapters.BsListAdapter
+import com.example.orderit.database.Dataset
 import com.example.orderit.database.ProductItem
 import com.example.orderit.mainViewModel.MainViewModel
 
@@ -43,11 +44,9 @@ class specials_page : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_specials_page, container, false)
-        val orders = mutableListOf<ProductItem>()
-        orders.add(ProductItem("Special maharashtrian kanda Poha", 50, 4, R.drawable.poha))
-        orders.add(ProductItem("Special Cold coffee", 99, 4, R.drawable.cold_coffee))
-        orders.add(ProductItem("Special punjabi aloo ke parothe", 70, 4, R.drawable.aloo_paratha))
-        orders.add(ProductItem("Special maharashtrian misal pav", 70, 4, R.drawable.misal))
+        val orders = Dataset().Specials
+
+
         val order_list = view.findViewById<RecyclerView>(R.id.specials_list)
         mUserViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 

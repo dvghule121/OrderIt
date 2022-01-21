@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.orderit.MainActivity
 import com.example.orderit.R
 import com.example.orderit.adapters.BsListAdapter
+import com.example.orderit.database.Dataset
 import com.example.orderit.database.ProductItem
 import com.example.orderit.mainViewModel.MainViewModel
 
@@ -45,20 +46,8 @@ class product_page : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_product_page, container, false)
-        val orders = mutableListOf<ProductItem>()
-        orders.add(ProductItem("Dominoes Extra large mushroom pizza", 199, 4, R.drawable.pizza))
-        orders.add(ProductItem("Ginger chai", 15, 4, R.drawable.chai))
-        orders.add(ProductItem("Special maharashtrian kanda Poha", 50, 4, R.drawable.poha))
-        orders.add(ProductItem("Vada pav", 15, 4, R.drawable.vada_pav))
-        orders.add(ProductItem("Idli sambhar", 50, 4, R.drawable.idli))
-        orders.add(ProductItem("Vada sambhar", 50, 4, R.drawable.vada_sambar))
-        orders.add(ProductItem("Special punjabi aloo ke parothe", 70, 4, R.drawable.aloo_paratha))
-        orders.add(ProductItem("french fries", 50, 4, R.drawable.french_fries))
-        orders.add(ProductItem("Coffee", 50, 4, R.drawable.coffe))
-        orders.add(ProductItem("Burger", 79, 5, R.drawable.burger))
-        orders.add(ProductItem("Special Cold coffee", 99, 5, R.drawable.cold_coffee))
-        orders.add(ProductItem("Cheese sandwich", 120, 3, R.drawable.sandwich))
-        orders.add(ProductItem("Tomato soup", 60, 5, R.drawable.tomato_soup))
+        val orders = Dataset().all_products
+
         val order_list = view.findViewById<RecyclerView>(R.id.product_list)
         mUserViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.orderit.MainActivity
 import com.example.orderit.R
 import com.example.orderit.adapters.BsListAdapter
+import com.example.orderit.database.Dataset
 import com.example.orderit.database.ProductItem
 import com.example.orderit.mainViewModel.MainViewModel
 
@@ -45,12 +46,7 @@ class best_sellers : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_best_sellers, container, false)
-        val orders = mutableListOf<ProductItem>()
-        orders.add(ProductItem("Dominoes Extra large mushroom pizza", 249, 4, R.drawable.pizza))
-        orders.add(ProductItem("Coffee", 99, 4, R.drawable.coffe))
-        orders.add(ProductItem("Burger", 79, 5, R.drawable.burger))
-        orders.add(ProductItem("Vada pav ", 79, 5, R.drawable.burger))
-        orders.add(ProductItem("Ginger chai", 79, 5, R.drawable.burger))
+        val orders = Dataset().bestSellers
         val order_list = view.findViewById<RecyclerView>(R.id.bs_list)
         mUserViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
 
