@@ -4,11 +4,13 @@ import android.app.Dialog
 import android.content.ContentValues
 import android.os.Build
 import android.os.Bundle
+import android.text.Layout
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -101,7 +103,7 @@ class basket_price_page : Fragment() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             dialog.window?.setBackgroundDrawableResource(R.drawable.dialog_bg)
         }
-        dialog.getWindow()?.setLayout(1000, 800);
+        dialog.getWindow()?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false); //Optional
         dialog.getWindow()?.getAttributes()?.windowAnimations = R.style.DialogAnimation; //Setting the animations to dialog
 
