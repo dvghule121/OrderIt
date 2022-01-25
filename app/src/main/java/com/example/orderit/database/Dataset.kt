@@ -28,6 +28,7 @@ class Dataset {
         ProductItem("Special punjabi aloo ke parothe", 70, 4, R.drawable.aloo_paratha),
         ProductItem("french fries", 50, 4, R.drawable.french_fries),
         ProductItem("Coffee", 50, 4, R.drawable.coffe),
+        ProductItem("Special maharashtrian misal pav", 70, 4, R.drawable.misal),
         ProductItem("Burger", 79, 5, R.drawable.burger),
         ProductItem("Special Cold coffee", 99, 5, R.drawable.cold_coffee),
         ProductItem("Cheese sandwich", 120, 3, R.drawable.sandwich),

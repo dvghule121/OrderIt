@@ -6,12 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.view.get
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,9 +16,8 @@ import com.example.orderit.R
 import com.example.orderit.adapters.BasketItemListAdapter
 import com.example.orderit.database.OrderSummaryItem
 import com.example.orderit.mainViewModel.MainViewModel
-import java.text.SimpleDateFormat
-import java.util.*
-import kotlin.collections.ArrayList
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -76,12 +70,21 @@ class basket_page : Fragment() {
 
 
         view.findViewById<Button>(R.id.place_order).setOnClickListener {
-            mUserViewModel.basketList.observe(viewLifecycleOwner, { basket ->
+            val auth = Firebase.auth
 
-                val BasketList = basket
-                adapter.setData(basket)
-                val pre_order = ArrayList<OrderSummaryItem>()
-                for (i in basket) {
+            val uid = auth.currentUser?.uid
+            if (uid.isNullOrBlank()) {
+                val activity: MainActivity = getActivity() as MainActivity
+                val loginPage = login_page()
+                activity.change(loginPage)
+                Log.d("clicked", "clicked")
+            } else {
+                mUserViewModel.basketList.observe(viewLifecycleOwner, { basket ->
+
+                    val BasketList = basket
+                    adapter.setData(basket)
+                    val pre_order = ArrayList<OrderSummaryItem>()
+                    for (i in basket) {
                         val order = OrderSummaryItem(
                             i.name,
                             i.price.toString().toInt(),
@@ -89,8 +92,7 @@ class basket_page : Fragment() {
                             i.qty.toString().toInt()
                         )
                         pre_order.add(order)
-                }
-
+                    }
 
 
                     val bundle = Bundle();
@@ -106,11 +108,8 @@ class basket_page : Fragment() {
                     act.change(fragment2)
 
 
-
-
-
-
-            })
+                })
+            }
 
 
         }

@@ -44,15 +44,15 @@ class offer_page : Fragment() {
 
         orders.add(
             OfferItem(
-                "Buy any Items of total above ₹500 and get free delivery within 30 min",
-                "Free Delivery on orders above ₹500",
+                "Buy any Items of total above ₹50 and get free delivery within 30 min",
+                "Free Delivery on orders above ₹50",
                 R.drawable.pizza
             )
         )
 
         orders.add(
             OfferItem(
-                "Get free french fries on combo pack",
+                "Get burger, french fries, cold coffe at lowest price.",
                 "Only on orderit",
                 R.drawable.combo_offer
             )
