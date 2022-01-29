@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -80,33 +81,37 @@ class basket_page : Fragment() {
                 Log.d("clicked", "clicked")
             } else {
                 mUserViewModel.basketList.observe(viewLifecycleOwner, { basket ->
+                    if (basket.size != 0 ) {
 
-                    val BasketList = basket
-                    adapter.setData(basket)
-                    val pre_order = ArrayList<OrderSummaryItem>()
-                    for (i in basket) {
-                        val order = OrderSummaryItem(
-                            i.name,
-                            i.price.toString().toInt(),
-                            i.img,
-                            i.qty.toString().toInt()
-                        )
-                        pre_order.add(order)
+                        val BasketList = basket
+                        adapter.setData(basket)
+                        val pre_order = ArrayList<OrderSummaryItem>()
+                        for (i in basket) {
+                            val order = OrderSummaryItem(
+                                i.name,
+                                i.price.toString().toInt(),
+                                i.img,
+                                i.qty.toString().toInt()
+                            )
+                            pre_order.add(order)
+                        }
+
+
+                        val bundle = Bundle();
+                        bundle.putParcelableArrayList(
+                            "pre_order_list",
+                            pre_order
+                        ); // Put anything what you want
+
+                        val fragment2 = Buy_page();
+                        fragment2.setArguments(bundle);
+
+                        val act = activity as MainActivity
+                        act.change(fragment2)
                     }
-
-
-                    val bundle = Bundle();
-                    bundle.putParcelableArrayList(
-                        "pre_order_list",
-                        pre_order
-                    ); // Put anything what you want
-
-                    val fragment2 = Buy_page();
-                    fragment2.setArguments(bundle);
-
-                    val act = activity as MainActivity
-                    act.change(fragment2)
-
+                    else{
+                        Toast.makeText(context, "Please add items to basket", Toast.LENGTH_SHORT).show()
+                    }
 
                 })
             }
