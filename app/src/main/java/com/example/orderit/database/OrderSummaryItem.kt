@@ -9,8 +9,7 @@ class OrderSummaryItem(val name: String?, val price:Int, val img: Int?, val qtty
         parcel.readInt(),
         parcel.readValue(Int::class.java.classLoader) as? Int,
         parcel.readInt()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)

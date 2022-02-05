@@ -44,9 +44,9 @@ class home_page : Fragment() {
 
 
 
-        transaction.add(R.id.offers, offers, "Frag_Top_tag");
-        transaction.add(R.id.bestSellers, bestSellers, "Frag_Top_tag");
-        transaction.add(R.id.products, products, "Frag_Top_tag");
+        transaction.add(R.id.offers, offers, "Frag_Top_tag")
+        transaction.add(R.id.bestSellers, bestSellers, "Frag_Top_tag")
+        transaction.add(R.id.products, products, "Frag_Top_tag")
         transaction.commit()
 
     }

@@ -42,7 +42,7 @@ class login_page : Fragment() {
         val view = inflater.inflate(R.layout.fragment_login_page, container, false)
         val login_btn = view.findViewById<Button>(R.id.next_button)
         val reg_btn = view.findViewById<Button>(R.id.to_register)
-        val activity: MainActivity = getActivity() as MainActivity
+        val activity: MainActivity = activity as MainActivity
 
         val useremail = view.findViewById<EditText>(R.id.login_edit_text)
         val pass = view.findViewById<EditText>(R.id.password_et)

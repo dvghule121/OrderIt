@@ -103,9 +103,9 @@ class basket_price_page : Fragment() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             dialog.window?.setBackgroundDrawableResource(R.drawable.dialog_bg)
         }
-        dialog.getWindow()?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-        dialog.setCancelable(false); //Optional
-        dialog.getWindow()?.getAttributes()?.windowAnimations = R.style.DialogAnimation; //Setting the animations to dialog
+        dialog.window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+        dialog.setCancelable(false) //Optional
+        dialog.window?.attributes?.windowAnimations = R.style.DialogAnimation //Setting the animations to dialog
 
 
         val et = dialog.findViewById<EditText>(R.id.address_text)

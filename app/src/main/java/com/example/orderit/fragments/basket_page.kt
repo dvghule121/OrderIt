@@ -75,13 +75,13 @@ class basket_page : Fragment() {
 
             val uid = auth.currentUser?.uid
             if (uid.isNullOrBlank()) {
-                val activity: MainActivity = getActivity() as MainActivity
+                val activity: MainActivity = activity as MainActivity
                 val loginPage = login_page()
                 activity.change(loginPage)
                 Log.d("clicked", "clicked")
             } else {
                 mUserViewModel.basketList.observe(viewLifecycleOwner, { basket ->
-                    if (basket.size != 0 ) {
+                    if (basket.size != 0) {
 
                         val BasketList = basket
                         adapter.setData(basket)
@@ -97,20 +97,20 @@ class basket_page : Fragment() {
                         }
 
 
-                        val bundle = Bundle();
+                        val bundle = Bundle()
                         bundle.putParcelableArrayList(
                             "pre_order_list",
                             pre_order
-                        ); // Put anything what you want
+                        ) // Put anything what you want
 
-                        val fragment2 = Buy_page();
-                        fragment2.setArguments(bundle);
+                        val fragment2 = Buy_page()
+                        fragment2.arguments = bundle
 
                         val act = activity as MainActivity
                         act.change(fragment2)
-                    }
-                    else{
-                        Toast.makeText(context, "Please add items to basket", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(context, "Please add items to basket", Toast.LENGTH_SHORT)
+                            .show()
                     }
 
                 })

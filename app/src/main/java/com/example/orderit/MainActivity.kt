@@ -244,7 +244,7 @@ class MainActivity : AppCompatActivity() {
                 ).show()
                 Log.e(
                     "error_msg",
-                    "onComplete: Failed=" + Objects.requireNonNull(task.exception)!!.message
+                    "onComplete: Failed=" + Objects.requireNonNull(task.exception)?.message
                 )
             }
         }

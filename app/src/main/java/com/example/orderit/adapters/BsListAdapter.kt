@@ -28,8 +28,8 @@ class BsListAdapter(var mUserViewModel: MainViewModel, val orders: List<ProductI
     override fun onBindViewHolder(holder: BsListViewHolder, position: Int) {
         val productItem = orders[position]
         holder.textTitle.text = productItem.name
-        holder.textPrice.setText(productItem.price.toString())
-        holder.rating.setText("★".repeat(productItem.rating))
+        holder.textPrice.text = productItem.price.toString()
+        holder.rating.text = "★".repeat(productItem.rating)
         holder.img_bs.setImageResource(productItem.imgId)
         holder.btn.setOnClickListener {
             val basket = Basket(

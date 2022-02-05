@@ -17,7 +17,7 @@ import com.google.firebase.ktx.Firebase
 import java.util.HashMap
 
 
-class FirebaseDataAdapter() {
+class FirebaseDataAdapter {
     val uid = Firebase.auth.uid.toString()
     val database = Firebase.database.getReference("Users")
 

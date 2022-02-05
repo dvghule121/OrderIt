@@ -10,7 +10,7 @@ import com.example.orderit.R
 import com.example.orderit.database.Order
 
 
-class OrderListAdapter() : RecyclerView.Adapter<OrderListViewHolder>() {
+class OrderListAdapter : RecyclerView.Adapter<OrderListViewHolder>() {
     var orders = emptyList<Order>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderListViewHolder {
         val inflater: LayoutInflater = LayoutInflater.from(parent.context)
@@ -22,7 +22,7 @@ class OrderListAdapter() : RecyclerView.Adapter<OrderListViewHolder>() {
         val orderItem = orders[position]
         holder.textname.text = orderItem.name
         holder.textprice.text =
-            (orderItem.qty?.let { orderItem.price?.times(it?.toInt()) }).toString()
+            (orderItem.qty?.let { orderItem.price?.times(it.toInt()) }).toString()
         holder.order_id.text = orderItem.uid.toString()
         holder.order_date.text = orderItem.date
         holder.textqtty.text = orderItem.qty.toString()

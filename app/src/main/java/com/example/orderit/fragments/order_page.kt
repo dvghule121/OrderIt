@@ -106,7 +106,7 @@ class order_page : Fragment() {
 
         val uid = auth.currentUser?.uid
         if (uid.isNullOrBlank()){
-            val activity: MainActivity = getActivity() as MainActivity
+            val activity: MainActivity = activity as MainActivity
             val loginPage = login_page()
             activity.change(loginPage)
             Log.d("clicked", "clicked")

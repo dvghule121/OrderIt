@@ -10,7 +10,7 @@ import com.example.orderit.database.Basket
 import com.example.orderit.database.OrderSummaryItem
 
 
-class PriceDetailsAdapter() : RecyclerView.Adapter<PriceDetailsViewHolder>() {
+class PriceDetailsAdapter : RecyclerView.Adapter<PriceDetailsViewHolder>() {
     var orders = mutableListOf<OrderSummaryItem>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PriceDetailsViewHolder {
         val inflater: LayoutInflater = LayoutInflater.from(parent.context)

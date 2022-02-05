@@ -119,7 +119,7 @@ class user_page : Fragment() {
         logout.setOnClickListener{
             auth.signOut()
             val mMainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-            val activity:MainActivity = getActivity() as MainActivity
+            val activity:MainActivity = activity as MainActivity
             mMainViewModel.removeUser()
             mMainViewModel.removeAllOrders()
             mMainViewModel.removeAllBasket()
@@ -159,7 +159,7 @@ class user_page : Fragment() {
 
         val uid = auth.currentUser?.uid
         if (uid.isNullOrBlank()){
-            val activity: MainActivity = getActivity() as MainActivity
+            val activity: MainActivity = activity as MainActivity
             val loginPage = login_page()
             activity.change(loginPage)
             Log.d("clicked", "clicked")

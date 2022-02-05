@@ -11,7 +11,7 @@ import com.example.orderit.database.Order
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class Admin_order_adapter() : RecyclerView.Adapter<Admin_order_ViewHolder>(),
+class Admin_order_adapter : RecyclerView.Adapter<Admin_order_ViewHolder>(),
     AdapterView.OnItemSelectedListener {
     var orders = emptyList<Order>()
     var st = "ordered"
@@ -28,7 +28,7 @@ class Admin_order_adapter() : RecyclerView.Adapter<Admin_order_ViewHolder>(),
         holder.textemail.text = orderItem.email
         ("Deliver to: "+ orderItem.address).also { holder.textaddress.text = it }
         holder.textprice.text =
-            (orderItem.qty?.let { orderItem.price?.times(it?.toInt()) }).toString()
+            (orderItem.qty?.let { orderItem.price?.times(it.toInt()) }).toString()
         holder.order_id.text = orderItem.uid.toString()
         holder.order_date.text = orderItem.date
         holder.textqtty.text = orderItem.qty.toString()
