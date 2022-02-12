@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -49,7 +51,7 @@ class basket_page : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_basket_page, container, false)
+        var view = inflater.inflate(R.layout.fragment_basket_page, container, false)
         mUserViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
 
@@ -64,7 +66,15 @@ class basket_page : Fragment() {
 
         order_list.adapter = adapter
         mUserViewModel.basketList.observe(viewLifecycleOwner, Observer { basket ->
-            adapter.setData(basket)
+            if (basket.isEmpty()){
+                view.findViewById<ImageView>(R.id.no_item).setImageResource(R.drawable.no_product_img)
+                view.findViewById<TextView>(R.id.noItem).text = "No product added yet !"
+                view.findViewById<Button>(R.id.place_order).visibility = View.GONE
+            }
+
+                adapter.setData(basket)
+
+
 
         })
 
@@ -80,7 +90,7 @@ class basket_page : Fragment() {
                 activity.change(loginPage)
                 Log.d("clicked", "clicked")
             } else {
-                mUserViewModel.basketList.observe(viewLifecycleOwner, { basket ->
+                mUserViewModel.basketList.observe(viewLifecycleOwner) { basket ->
                     if (basket.size != 0) {
 
                         val BasketList = basket
@@ -113,7 +123,7 @@ class basket_page : Fragment() {
                             .show()
                     }
 
-                })
+                }
             }
 
 

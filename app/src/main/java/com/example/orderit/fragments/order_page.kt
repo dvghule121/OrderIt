@@ -5,8 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CompoundButton
-import android.widget.Switch
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -65,29 +64,35 @@ class order_page : Fragment() {
         order_list.adapter = adapter
         FirebaseDataAdapter().load_user_data(mUserViewModel, Firebase.auth.uid.toString())
         mUserViewModel.orderList.observe(viewLifecycleOwner, Observer { order ->
-            val tempListdelivered = mutableListOf<Order>()
-            val tempListpending = mutableListOf<Order>()
-            
-            for (i in order){
-                if (i.status == "delivered"){
-                    tempListdelivered.add(i)
-                }
-                else{
-                    tempListpending.add(i)
-                }
-                
+            if (order.isEmpty()){
+                view.findViewById<ImageView>(R.id.no_item).setImageResource(R.drawable.no_product_img)
+                view.findViewById<TextView>(R.id.noItem).text = "No item ordered yet !"
             }
-            adapter.setData(tempListpending)
-            
-            val btn = view.findViewById<com.google.android.material.switchmaterial.SwitchMaterial>(R.id.switch_status)
-            btn.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-                if(isChecked){
-                    adapter.setData(tempListdelivered)
+            else {
+
+                val tempListdelivered = mutableListOf<Order>()
+                val tempListpending = mutableListOf<Order>()
+
+                for (i in order) {
+                    if (i.status == "delivered") {
+                        tempListdelivered.add(i)
+                    } else {
+                        tempListpending.add(i)
+                    }
+
                 }
-                else {
-                    adapter.setData(tempListpending)
-                }
-            })
+                adapter.setData(tempListpending)
+
+                val btn =
+                    view.findViewById<com.google.android.material.switchmaterial.SwitchMaterial>(R.id.switch_status)
+                btn.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+                    if (isChecked) {
+                        adapter.setData(tempListdelivered)
+                    } else {
+                        adapter.setData(tempListpending)
+                    }
+                })
+            }
             
 
         })
