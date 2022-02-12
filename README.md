@@ -26,10 +26,10 @@ many restaurent offers home delivery for their customers but doesn't have platfo
 ## App ScreenShots 📱
 <table>
   <tr>
-    <td> <img src="https://github.com/dvghule121/OrderIt/blob/dvghule121-images-orderit/Screenshot_1643138610-min.png" widhth="380" height="330">
-    <td> <img src="https://github.com/dvghule121/OrderIt/blob/dvghule121-images-orderit/Screenshot_1643138627-min.png" widhth="380" height="330">
-    <td><img src="https://github.com/dvghule121/OrderIt/blob/dvghule121-images-orderit/Screenshot_1643138708-min.png" widhth="380" height="330">
-    <td> <img src="https://github.com/dvghule121/OrderIt/blob/dvghule121-images-orderit/Screenshot_1643139205-min.png" widhth="380" height="330">
+    <td> <img src="https://github.com/dvghule121/OrderIt/blob/main/Screenshot_1643138610-min.png" widhth="380" height="530">
+    <td> <img src="https://github.com/dvghule121/OrderIt/blob/main/Screenshot_1643138627-min.png" widhth="380" height="530">
+    <td><img src="https://github.com/dvghule121/OrderIt/blob/main/Screenshot_1643138708-min.png" widhth="380" height="530">
+    <td> <img src="https://github.com/dvghule121/OrderIt/blob/main/Screenshot_1643139205-min.png" widhth="380" height="530">
   </tr>
 </table>
 
